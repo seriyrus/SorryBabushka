@@ -1,11 +1,450 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- ============ SEO ============ -->
+    <title>Кофейня «Аромат» — где рождается вкус настоящего кофе</title>
+    <meta name="description" content="Уютная кофейня в центре города: свежеобжаренный кофе, домашняя выпечка и теплая атмосфера. Попробуйте наш кофе с собой или заберите домой.">
+    <meta name="keywords" content="кофейня, кофе, эспрессо, капучино, выпечка, десерты, кофе домой">
+    <meta name="author" content="Кофейня «Аромат»">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Кофейня «Аромат» — где рождается вкус настоящего кофе">
+    <meta property="og:description" content="Уютная атмосфера и лучший кофе в городе.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="media/banner.webp">
+
+    <!-- ============ Шрифты ============ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ============ Стили ============ -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <a class="skip-link" href="#main-content">Перейти к основному содержанию</a>
+
+    <!-- ==================================================================
+         HEADER — фиксированная навигация
+    =================================================================== -->
+    <header class="header" id="header">
+        <div class="header__inner container">
+            <a href="#hero" class="header__logo" aria-label="Кофейня «Аромат» — на главную">
+                <svg class="header__logo-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M18.5 3H6c-1.1 0-2 .9-2 2v5.5c0 3 2.3 5.4 5.3 5.8C9.7 17.8 11 18.8 12.7 19v2h-3v2h8v-2h-3v-2c3.5-.5 6-3.5 6-7V5c0-1.1-.9-2-2.2-2zM6 5h10.5v5.5c0 2.5-2 4.5-4.5 4.5h-1.5C7.5 15 6 13 6 10.5V5z"/>
+                </svg>
+                <span class="header__logo-title">Аромат</span>
+            </a>
+
+            <nav class="nav" aria-label="Основная навигация">
+                <button class="nav__burger" id="nav-burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="nav__burger-line"></span>
+                    <span class="nav__burger-line"></span>
+                    <span class="nav__burger-line"></span>
+                </button>
+                <ul class="nav__menu" id="nav-menu">
+                    <li><a href="#hero" class="nav__link">Главная</a></li>
+                    <li><a href="#about" class="nav__link">О нас</a></li>
+                    <li><a href="#menu" class="nav__link">Меню</a></li>
+                    <li><a href="#gallery" class="nav__link">Галерея</a></li>
+                    <li><a href="#contacts" class="nav__link">Контакты</a></li>
+                    <li><a href="#contacts" class="nav__link nav__link--cta">Забронировать</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ==================================================================
+             HERO SECTION
+        =================================================================== -->
+        <section class="hero" id="hero">
+            <div class="hero__overlay" aria-hidden="true"></div>
+            <div class="hero__content container">
+                <h1 class="hero__title">Где рождается вкус настоящего&nbsp;кофе</h1>
+                <p class="hero__subtitle">Уютная атмосфера и лучший кофе в городе</p>
+                <a href="#menu" class="btn btn--primary hero__cta">Посмотреть меню</a>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             ABOUT SECTION
+        =================================================================== -->
+        <section class="about section" id="about">
+            <div class="container about__grid">
+                <div class="about__media reveal">
+                    <img src="media/caffe-from-outside.webp" alt="Фасад нашей кофейни «Аромат» с уличными столиками" loading="lazy" class="about__img">
+                </div>
+                <div class="about__content reveal">
+                    <h2 class="section__title">Добро пожаловать!</h2>
+                    <p>Кофейня «Аромат» — небольшой семейный проект, выросший из любви к настоящему зерновому кофе. Мы обжариваем зерна сами, пишем собственные рецепты и знаем постоянных гостей по именам.</p>
+                    <p>Здесь тихо играет музыка, светит солнце через большие окна и всегда пахнет свежей выпечкой. Заходите на чашку эспрессо перед работой или задерживайтесь на долгие разговоры с друзьями.</p>
+                    <p>Мы верим: кофе — это не напиток, а повод встретиться.</p>
+
+                    <ul class="about__features">
+                        <li class="about__feature">
+                            <span class="about__feature-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.5 3H6c-1.1 0-2 .9-2 2v5.5c0 3 2.3 5.4 5.3 5.8C9.7 17.8 11 18.8 12.7 19v2h-3v2h8v-2h-3v-2c3.5-.5 6-3.5 6-7V5c0-1.1-.9-2-2.2-2zM6 5h10.5v5.5c0 2.5-2 4.5-4.5 4.5h-1.5C7.5 15 6 13 6 10.5V5z"/></svg>
+                            </span>
+                            <span><strong>Зерновой кофе</strong> собственной обжарки</span>
+                        </li>
+                        <li class="about__feature">
+                            <span class="about__feature-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 0 1 5 5c0 1.1-.35 2.1-.96 2.93L18 10l-1.5 1.9c.32.67.5 1.38.5 2.1 0 1.7-1 3.15-2.5 3.8.33.6.5 1.2.5 1.9 0 1.2-.8 2.3-2 2.6v1.7h-2v-1.7c-1.2-.3-2-1.4-2-2.6 0-.7.17-1.3.5-1.9A4.2 4.2 0 0 1 7 14c0-.72.18-1.43.5-2.1L6 10l1.96-.07A5 5 0 0 1 12 2zm0 2a3 3 0 0 0-3 2.8l.03 1.2H7.7l.8 1 .3.9-.6 1.1c-.13.34-.2.66-.2 1 0 .9.55 1.68 1.4 2 .5.14.9.5 1.1.96l.4 1.14c.06.3.1.6.1.9h2c0-.3.04-.6.1-.9l.4-1.14c.2-.46.6-.82 1.1-.96.85-.32 1.4-1.1 1.4-2 0-.34-.07-.66-.2-1l-.6-1.1.3-.9.8-1h-1.33V8A3 3 0 0 0 12 4z"/></svg>
+                            </span>
+                            <span><strong>Свежая выпечка</strong> каждое утро</span>
+                        </li>
+                        <li class="about__feature">
+                            <span class="about__feature-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-8-5.6-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 5.4-8 11-8 11z"/></svg>
+                            </span>
+                            <span><strong>Уютная атмосфера</strong> для гостей</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SERVICES SECTION
+        =================================================================== -->
+        <section class="services section" id="services">
+            <div class="container">
+                <h2 class="section__title section__title--center reveal">Что мы предлагаем</h2>
+                <div class="services__grid">
+
+                    <article class="service-card reveal">
+                        <div class="service-card__media">
+                            <img src="media/cup-original.webp" alt="Бумажная чашка кофе с собой" loading="lazy">
+                        </div>
+                        <div class="service-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.5 3H6c-1.1 0-2 .9-2 2v5.5c0 3 2.3 5.4 5.3 5.8C9.7 17.8 11 18.8 12.7 19v2h-3v2h8v-2h-3v-2c3.5-.5 6-3.5 6-7V5c0-1.1-.9-2-2.2-2zM6 5h10.5v5.5c0 2.5-2 4.5-4.5 4.5h-1.5C7.5 15 6 13 6 10.5V5z"/></svg>
+                        </div>
+                        <h3 class="service-card__title">Кофе с собой</h3>
+                        <p class="service-card__text">Ваш любимый напиток за 5 минут — в фирменной стакане TermoCup. Возьмите с собой на работу или прогулку.</p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-card__media">
+                            <img src="media/coffe.webp" alt="Свежеиспеченные круассаны и выпечка" loading="lazy">
+                        </div>
+                        <div class="service-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.5 2 5.5 4.5 5 8c-.6-.2-1.4-.3-2 0-.6.3-1 .9-1 1.5 0 .8.5 1.4 1.2 1.6-.2.6-.2 1.2 0 1.9.5 1.8 2 3 4.3 3.7 1.2.3 2.8.3 4.5.3s3.3 0 4.5-.3c2.3-.7 3.8-1.9 4.3-3.7.2-.7.2-1.3 0-1.9.7-.2 1.2-.8 1.2-1.6 0-.6-.4-1.2-1-1.5-.6-.3-1.4-.2-2 0-.5-3.5-3.5-6-7-6zm0 2c2.8 0 5 2 5.4 4.7-.6.4-1.2 1-1.6 1.6-.5 1-.9 1.7-1.9 2.2-.9.5-2 .6-1.9.6-1 0-2-.1-2.9-.6-1-.5-1.4-1.2-1.9-2.2-.4-.6-1-1.2-1.6-1.6C7 6 9.2 4 12 4z"/></svg>
+                        </div>
+                        <h3 class="service-card__title">Свежая выпечка</h3>
+                        <p class="service-card__text">Круассаны, булочки с корицей и сырники из печи — каждое утро с 7:00. Пока тепло — вкусно вдвойне.</p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-card__media">
+                            <img src="media/XXXL.webp" alt="Обжаренные кофейные зерна разных сортов" loading="lazy">
+                        </div>
+                        <div class="service-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 2C4.5 4 3 7 3 10.5c0 3 1.5 4.5 4.5 4.5S12 13.5 12 10.5 10.5 2 7.5 2zm9 7c-3 0-4.5 1.5-4.5 4.5S13.5 22 16.5 22 21 17 21 13.5 19.5 9 16.5 9zM5.6 6.2c1 .8 2 2.3 2.4 4.3.1-.6-.3-4.5-2.4-4.3zM14.6 11.2c1 .8 2 2.3 2.4 4.3.1-.6-.3-4.5-2.4-4.3z"/></svg>
+                        </div>
+                        <h3 class="service-card__title">Разные сорта</h3>
+                        <p class="service-card__text">От мягкой Эфиопии до насыщенной Колумбии — подберем сорт под ваш вкус и помолем для домашнего кофе.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             MENU SECTION
+        =================================================================== -->
+        <section class="menu section" id="menu">
+            <div class="container">
+                <h2 class="section__title section__title--center reveal">Популярные напитки</h2>
+                <div class="menu__grid">
+
+                    <article class="menu-card reveal">
+                        <h3 class="menu-card__title">Эспрессо</h3>
+                        <p class="menu-card__desc">Классический двойной шот из авторского бленда «Аромат»</p>
+                        <p class="menu-card__price">150 ₽</p>
+                    </article>
+
+                    <article class="menu-card reveal">
+                        <h3 class="menu-card__title">Американо</h3>
+                        <p class="menu-card__desc">Эспрессо с горячей водой — мягко и бодро</p>
+                        <p class="menu-card__price">170 ₽</p>
+                    </article>
+
+                    <article class="menu-card reveal">
+                        <h3 class="menu-card__title">Капучино</h3>
+                        <p class="menu-card__desc">Плотное молоко с бархатной пенкой</p>
+                        <p class="menu-card__price">220 ₽</p>
+                    </article>
+
+                    <article class="menu-card reveal">
+                        <h3 class="menu-card__title">Латте</h3>
+                        <p class="menu-card__desc">Нежный молочный напиток с сюрпризом</p>
+                        <p class="menu-card__price">250 ₽</p>
+                    </article>
+
+                    <article class="menu-card reveal">
+                        <h3 class="menu-card__title">Флэт Уайт</h3>
+                        <p class="menu-card__desc">Двойной шот с минимумом молока</p>
+                        <p class="menu-card__price">260 ₽</p>
+                    </article>
+
+                    <article class="menu-card reveal">
+                        <h3 class="menu-card__title">Раф</h3>
+                        <p class="menu-card__desc">Сливочный ванильный — уже почти десерт</p>
+                        <p class="menu-card__price">290 ₽</p>
+                    </article>
+
+                    <article class="menu-card reveal">
+                        <h3 class="menu-card__title">Какао</h3>
+                        <p class="menu-card__desc">Горячий шоколад с маршмеллоу</p>
+                        <p class="menu-card__price">240 ₽</p>
+                    </article>
+
+                    <article class="menu-card reveal">
+                        <h3 class="menu-card__title">Фильтр</h3>
+                        <p class="menu-card__desc">Спешелти-сорт на выбор бариста (V60)</p>
+                        <p class="menu-card__price">230 ₽</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             GALLERY SECTION
+        =================================================================== -->
+        <section class="gallery section" id="gallery">
+            <div class="container">
+                <h2 class="section__title section__title--center reveal">Наш интерьер</h2>
+                <div class="gallery__grid">
+                    <button class="gallery__item reveal" data-lightbox="media/interier1.webp" aria-label="Открыть фото интерьера — зал у окна">
+                        <img src="media/interier1.webp" alt="Зал кофейни с деревянными столами и большими окнами" loading="lazy">
+                        <span class="gallery__zoom" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14zm.5-7H9v2.5H6.5v1H9V13h1v-2.5h2.5v-1H10V7z"/></svg>
+                        </span>
+                    </button>
+                    <button class="gallery__item reveal" data-lightbox="media/interier2.webp" aria-label="Открыть фото интерьера — барная стойка">
+                        <img src="media/interier2.webp" alt="Барная стойка кофейни с профессиональной кофемашиной" loading="lazy">
+                        <span class="gallery__zoom" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14zm.5-7H9v2.5H6.5v1H9V13h1v-2.5h2.5v-1H10V7z"/></svg>
+                        </span>
+                    </button>
+                    <button class="gallery__item reveal" data-lightbox="media/interier3.webp" aria-label="Открыть фото интерьера — уютный уголок">
+                        <img src="media/interier3.webp" alt="Уютный уголок с мягкими креслами и книгами" loading="lazy">
+                        <span class="gallery__zoom" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14zm.5-7H9v2.5H6.5v1H9V13h1v-2.5h2.5v-1H10V7z"/></svg>
+                        </span>
+                    </button>
+                    <button class="gallery__item reveal" data-lightbox="media/interier1.webp" aria-label="Открыть фото интерьера — витрина с десертами">
+                        <img src="media/interier2.webp" alt="Витрина с домашними десертами и выпечкой" loading="lazy">
+                        <span class="gallery__zoom" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14zm.5-7H9v2.5H6.5v1H9V13h1v-2.5h2.5v-1H10V7z"/></svg>
+                        </span>
+                    </button>
+                    <button class="gallery__item reveal" data-lightbox="media/interier2.webp" aria-label="Открыть фото интерьера — зона у входа">
+                        <img src="media/interier3.webp" alt="Зона у входа с растениями и мягким светом" loading="lazy">
+                        <span class="gallery__zoom" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14zm.5-7H9v2.5H6.5v1H9V13h1v-2.5h2.5v-1H10V7z"/></svg>
+                        </span>
+                    </button>
+                    <button class="gallery__item reveal" data-lightbox="media/interier3.webp" aria-label="Открыть фото интерьера — летняя терраса">
+                        <img src="media/interier1.webp" alt="Летняя терраса кофейни со столиками" loading="lazy">
+                        <span class="gallery__zoom" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.49 4.49 0 0 1 9.5 14zm.5-7H9v2.5H6.5v1H9V13h1v-2.5h2.5v-1H10V7z"/></svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             PRODUCTS SECTION
+        =================================================================== -->
+        <section class="products section" id="products">
+            <div class="container">
+                <h2 class="section__title section__title--center reveal">Наш кофе у вас дома</h2>
+                <div class="products__grid">
+
+                    <article class="product-card reveal">
+                        <div class="product-card__media">
+                            <img src="media/XXXL.webp" alt="Пачка зернового кофе «Эфиопия Сидамо»" loading="lazy">
+                        </div>
+                        <h3 class="product-card__title">Эфиопия Сидамо</h3>
+                        <div class="product-card__rating" role="img" aria-label="Рейтинг 5 из 5">
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                        </div>
+                        <p class="product-card__price">1 250 ₽</p>
+                        <button class="btn btn--secondary product-card__buy" type="button">Купить</button>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-card__media">
+                            <img src="media/XXXL.webp" alt="Пачка зернового кофе «Колумбия Уила»" loading="lazy">
+                        </div>
+                        <h3 class="product-card__title">Колумбия Уила</h3>
+                        <div class="product-card__rating" role="img" aria-label="Рейтинг 5 из 5">
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star product-card__star--dim" aria-hidden="true">★</span>
+                        </div>
+                        <p class="product-card__price">1 100 ₽</p>
+                        <button class="btn btn--secondary product-card__buy" type="button">Купить</button>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-card__media">
+                            <img src="media/XXXL.webp" alt="Пачка зернового кофе «Бразилия Сантос»" loading="lazy">
+                        </div>
+                        <h3 class="product-card__title">Бразилия Сантос</h3>
+                        <div class="product-card__rating" role="img" aria-label="Рейтинг 5 из 5">
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                            <span class="product-card__star" aria-hidden="true">★</span>
+                        </div>
+                        <p class="product-card__price">950 ₽</p>
+                        <button class="btn btn--secondary product-card__buy" type="button">Купить</button>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             LOCATION SECTION (parallax)
+        =================================================================== -->
+        <section class="location" id="contacts">
+            <div class="location__overlay" aria-hidden="true"></div>
+            <div class="container location__content reveal">
+                <h2 class="section__title section__title--light">Ждем вас в нашей кофейне</h2>
+                <div class="location__info">
+                    <p class="location__item">
+                        <strong>Адрес:</strong> ул. Кофейная, 12, город Новосибирск
+                    </p>
+                    <p class="location__item">
+                        <strong>Телефон:</strong> <a class="location__link" href="tel:+79991234567">+7 (999) 123-45-67</a>
+                    </p>
+                    <p class="location__item">
+                        <strong>Часы работы:</strong> ежедневно 7:00–22:00
+                    </p>
+                </div>
+                <a class="btn btn--primary" href="https://yandex.ru/maps/?text=ул. Кофейная 12" target="_blank" rel="noopener noreferrer">Как добраться</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================================================================
+         FOOTER
+    =================================================================== -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <section class="footer__col" aria-label="Контакты">
+                <h3 class="footer__title">Контакты</h3>
+                <address class="footer__address">
+                    <p>ул. Кофейная, 12, город Новосибирск</p>
+                    <p><a class="footer__link" href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                    <p><a class="footer__link" href="mailto:hello@aromat-coffee.ru">hello@aromat-coffee.ru</a></p>
+                </address>
+            </section>
+            <section class="footer__col" aria-label="Часы работы">
+                <h3 class="footer__title">Часы работы</h3>
+                <ul class="footer__hours">
+                    <li><span>Пн — Пт</span><span>7:00 — 22:00</span></li>
+                    <li><span>Суббота</span><span>8:00 — 23:00</span></li>
+                    <li><span>Воскресенье</span><span>8:00 — 21:00</span></li>
+                </ul>
+            </section>
+            <section class="footer__col" aria-label="Социальные сети">
+                <h3 class="footer__title">Мы в соцсетях</h3>
+                <div class="footer__socials">
+                    <a href="#" class="footer__social" aria-label="Мы во ВКонтакте">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .8A11.2 11.2 0 1 0 23.2 12 11.2 11.2 0 0 0 12 .8zm5.6 12.7c1.2 1.1 1.7 1.5 1.8 1.8a.6.6 0 0 1-.6.9h-1.7a1.3 1.3 0 0 1-1.2-.8s-1-.9-1.6-1.6c-.5-.4-1-.5-1.1.4v1.2a1 1 0 0 1-.9 1c-1.6 0-3.5-1-5-2.9-2-2.7-2.5-4.7-2.5-5.1 0-.3.1-.6.7-.6h1.7a.8.8 0 0 1 .7.6 10 10 0 0 0 1.2 2.4c.5.7.8.9 1 .9a.4.4 0 0 0 .2-.5V8.6a1.1 1.1 0 0 0-.4-.9c.3-.8 1-.7 1.7-.7.6 0 1.3 0 1.4.3.5.1.5.7.5 1.3v2.3c0-.5.5-.4 1-.1 1 .5 2.5 2 2.5 2z" transform="scale(.9) translate(1.2 1.2)"/></svg>
+                    </a>
+                    <a href="#" class="footer__social" aria-label="Мы в Telegram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.6 18.7 20a1.1 1.1 0 0 1-1.6.6l-4.5-3.3-2.1 2a1 1 0 0 1-1.5-.1L7.6 15l-3.4-1.2c-.7-.3-.7-1.2 0-1.5l16.3-6.3a1 1 0 0 1 1.4 1.6zM8.7 12.9l.7 4 1.5-1.5-2.2-2.5zm5.2 2.3-4.3-5.3 7-3.9-2.7 9.2z" transform="translate(-1 -1)"/></svg>
+                    </a>
+                    <a href="#" class="footer__social" aria-label="Мы в Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm9.3 3a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 16.8 7zM12 7a5 5 0 1 1-5 5 5 5 0 0 1 5-5zm0 2a3 3 0 1 0 3 3 3 3 0 0 0-3-3z"/></svg>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>© 2026 Кофейня «Аромат». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ Кнопка «Наверх» ============ -->
+    <button class="to-top" id="to-top" type="button" aria-label="Наверх">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 4 8 8-1.4 1.4L13 7.8V20h-2V7.8l-5.6 5.6L4 12z"/></svg>
+    </button>
+
+    <!-- ============ Модальное окно «Быстрая связь» ============ -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal__backdrop" data-modal-close></div>
+        <div class="modal__window">
+            <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">✕</button>
+            <h2 class="modal__title" id="modal-title">Забронировать столик</h2>
+            <p class="modal__text">Оставьте контакты — мы перезвоним в течение 15 минут.</p>
+            <form class="form" id="contact-form" novalidate>
+                <label class="form__label">
+                    Ваше имя
+                    <input class="form__input" type="text" name="name" placeholder="Наталья" required autocomplete="name">
+                </label>
+                <label class="form__label">
+                    Телефон
+                    <input class="form__input" type="tel" name="phone" placeholder="+7 (999) 123-45-67" required autocomplete="tel" pattern="^\+?[0-9()\- ]{10,20}$">
+                </label>
+                <label class="form__label">
+                    Сообщение
+                    <textarea class="form__input form__input--area" name="message" rows="3" placeholder="Хочу столик у окна на субботу, 19:00"></textarea>
+                </label>
+                <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+                <button class="btn btn--primary form__submit" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ============ Lightbox ============ -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
+        <button class="lightbox__close" type="button" data-lightbox-close aria-label="Закрыть просмотр">✕</button>
+        <img class="lightbox__img" id="lightbox-img" src="" alt="Фотография интерьера кофейни">
+    </div>
+
+    <!-- ============ Structured Data (SEO) ============ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "Кофейня «Аромат»",
+        "description": "Уютная кофейня со свежеобжаренным кофе и домашней выпечкой",
+        "image": "media/banner.webp",
+        "telephone": "+7-999-123-45-67",
+        "servesCuisine": "Coffee",
+        "priceRange": "₽₽",
+        "openingHours": "Mo-Su 07:00-22:00",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Кофейная, 12",
+            "addressLocality": "Новосибирск",
+            "addressCountry": "RU"
+        }
+    }
+    </script>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
